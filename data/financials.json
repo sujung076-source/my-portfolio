@@ -1,70 +1,71 @@
 {
-  "company": {
-    "name": "HD현대중공업",
-    "corp_code": "01390344"
-  },
-  "report": {
-    "name": "사업보고서 (2025.12)",
+  "reporting_basis": {
     "business_year": 2025,
-    "report_code": "11011",
-    "receipt_number": "20260320000859",
-    "filing_date": "2026-03-20",
     "period_end": "2025-12-31",
     "financial_statement_division": "CFS",
-    "financial_statement_basis": "연결"
+    "financial_statement_basis": "연결",
+    "unit": "KRW"
   },
-  "unit": "KRW",
-  "metrics": [
+  "companies": [
     {
-      "key": "revenue",
-      "label": "매출액",
-      "value": 17580633257000,
-      "account_id": "ifrs-full_Revenue",
-      "source": "OpenDART 단일회사 전체 재무제표 API"
+      "key": "hd_hhi",
+      "name": "HD현대중공업",
+      "stock_code": "329180",
+      "corp_code": "01390344",
+      "report": {
+        "name": "사업보고서 (2025.12)",
+        "report_code": "11011",
+        "receipt_number": "20260320000859",
+        "filing_date": "2026-03-20",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000859"
+      },
+      "metrics": [
+        { "key": "revenue", "label": "매출액", "value": 17580633257000, "account_id": "ifrs-full_Revenue", "source": "OpenDART 단일회사 전체 재무제표 API" },
+        { "key": "operating_income", "label": "영업이익", "value": 2037510103000, "account_id": "dart_OperatingIncomeLoss", "source": "OpenDART 단일회사 전체 재무제표 API" },
+        { "key": "order_backlog", "label": "수주잔고", "value": 56384472000000, "reported_value": 56384472, "reported_unit": "백만원", "source": "사업보고서 매출 및 수주상황의 기말 합계" }
+      ]
     },
     {
-      "key": "operating_income",
-      "label": "영업이익",
-      "value": 2037510103000,
-      "account_id": "dart_OperatingIncomeLoss",
-      "source": "OpenDART 단일회사 전체 재무제표 API"
+      "key": "samsung_hi",
+      "name": "삼성중공업",
+      "stock_code": "010140",
+      "corp_code": "00126478",
+      "report": {
+        "name": "사업보고서 (2025.12)",
+        "report_code": "11011",
+        "receipt_number": "20260312001037",
+        "filing_date": "2026-03-12",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001037",
+        "krx_mirror": "https://kind.krx.co.kr/external/2026/03/12/001651/20260312003896/11011.htm"
+      },
+      "metrics": [
+        { "key": "revenue", "label": "매출액", "value": 10650010702818, "account_id": "ifrs-full_Revenue", "source": "2025년 연결 사업보고서" },
+        { "key": "operating_income", "label": "영업이익", "value": 862210880029, "account_id": "dart_OperatingIncomeLoss", "source": "2025년 연결 사업보고서" },
+        { "key": "order_backlog", "label": "수주잔고", "value": 28030500000000, "reported_value": 280305, "reported_unit": "억원", "source": "사업보고서 매출 및 수주상황의 기말 합계" }
+      ]
     },
     {
-      "key": "order_backlog",
-      "label": "수주잔고",
-      "value": 56384472000000,
-      "reported_value": 56384472,
-      "reported_unit": "백만원",
-      "as_of": "2025-12-31",
-      "source": "OpenDART 사업보고서 원문 II. 사업의 내용 > 4. 매출 및 수주상황 > 다. 수주상황"
+      "key": "hanwha_ocean",
+      "name": "한화오션",
+      "stock_code": "042660",
+      "corp_code": "00111722",
+      "report": {
+        "name": "정정 사업보고서 (2025.12)",
+        "report_code": "11011",
+        "receipt_number": "20260317000644",
+        "filing_date": "2026-03-17",
+        "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000644"
+      },
+      "metrics": [
+        { "key": "revenue", "label": "매출액", "value": 12783512278323, "account_id": "ifrs-full_Revenue", "source": "2025년 연결 정정 사업보고서" },
+        { "key": "operating_income", "label": "영업이익", "value": 1167590137928, "account_id": "dart_OperatingIncomeLoss", "source": "2025년 연결 정정 사업보고서" },
+        { "key": "order_backlog", "label": "수주잔고", "value": 34495064000000, "reported_value": 34495064, "reported_unit": "백만원", "source": "정정 사업보고서 연결 주석의 기말 수주잔고 합계" }
+      ]
     }
   ],
-  "order_backlog_breakdown": [
-    {
-      "segment": "조선",
-      "value": 44351125000000,
-      "reported_value": 44351125,
-      "reported_unit": "백만원"
-    },
-    {
-      "segment": "해양플랜트",
-      "value": 2445087000000,
-      "reported_value": 2445087,
-      "reported_unit": "백만원"
-    },
-    {
-      "segment": "기타",
-      "value": 9588260000000,
-      "reported_value": 9588260,
-      "reported_unit": "백만원"
-    }
+  "notes": [
+    "매출액과 영업이익은 2025년 연결 재무제표 기준입니다.",
+    "수주잔고는 각 회사 사업보고서의 2025년 말 연결 기말 합계이며 사업범위와 공시 분류가 서로 다릅니다."
   ],
-  "sources": {
-    "disclosure_list_api": "https://opendart.fss.or.kr/api/list.json",
-    "financial_statements_api": "https://opendart.fss.or.kr/api/fnlttSinglAcntAll.json",
-    "disclosure_document_api": "https://opendart.fss.or.kr/api/document.xml",
-    "dart_report": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000859",
-    "krx_report_mirror": "https://kind.krx.co.kr/external/2026/03/20/001094/20260320004139/11011.htm"
-  },
   "retrieved_at": "2026-10-01"
 }

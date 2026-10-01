@@ -41,7 +41,7 @@
     .nav-links a:hover::after { opacity: .72; transform: scaleX(1); }
 
     .hero {
-      position: relative; isolation: isolate; display: grid; min-height: min(780px,100svh); padding: 112px 0 64px; overflow: hidden; color: var(--white);
+      position: relative; isolation: isolate; display: grid; min-height: min(680px,88svh); padding: 86px 0 46px; overflow: hidden; color: var(--white);
       background: radial-gradient(circle at 50% 18%, rgba(25,75,126,.82), transparent 34%), linear-gradient(180deg,#04101e 0%,#02070d 52%,var(--black) 88%);
       align-items: center;
     }
@@ -54,9 +54,9 @@
     .eyebrow { margin: 0; color: inherit; font-size: 14px; font-weight: 600; letter-spacing: -.01em; }
     .hero .eyebrow { color: var(--link-dark); }
     h1, h2, h3 { font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
-    h1 { max-width: 980px; margin: 18px auto 0; font-size: clamp(48px,7.2vw,82px); font-weight: 600; letter-spacing: -.055em; line-height: 1.05; text-wrap: balance; }
-    h1 span { display: block; margin-top: 22px; color: #c7c7cc; font-size: clamp(22px,2.7vw,32px); font-weight: 500; letter-spacing: -.035em; line-height: 1.2; }
-    .hero-summary { display: flex; max-width: 860px; margin: 42px auto 0; flex-direction: column; align-items: center; gap: 26px; }
+    h1 { max-width: 980px; margin: 14px auto 0; font-size: clamp(44px,6.4vw,72px); font-weight: 600; letter-spacing: -.055em; line-height: 1.05; text-wrap: balance; }
+    h1 span { display: block; margin-top: 18px; color: #c7c7cc; font-size: clamp(20px,2.4vw,28px); font-weight: 500; letter-spacing: -.035em; line-height: 1.2; }
+    .hero-summary { display: flex; max-width: 860px; margin: 30px auto 0; flex-direction: column; align-items: center; gap: 20px; }
     .hero-summary p { max-width: 680px; margin: 0; color: #d2d2d7; font-size: 19px; text-wrap: balance; }
     .fact-list { display: flex; margin: 0; padding: 0; flex-wrap: wrap; justify-content: center; gap: 8px; list-style: none; }
     .fact-list li { padding: 7px 13px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: #f5f5f7; background: rgba(255,255,255,.07); font-size: 12px; backdrop-filter: blur(14px); }
@@ -93,6 +93,7 @@
     .fit-list p { margin: 0; color: #c7c7cc; }
 
     #project { background: var(--fog); }
+    .project-list { display: grid; gap: 24px; }
     .project-shell { display: grid; overflow: hidden; border: 1px solid rgba(29,29,31,.08); border-radius: 28px; grid-template-columns: minmax(0,1.15fr) minmax(340px,.85fr); background: var(--surface); }
     .project-visual {
       display: grid; min-height: 570px; padding: 46px; place-items: center;
@@ -102,6 +103,18 @@
     .placeholder-art { max-width: 430px; padding: 48px 34px; border: 1px solid rgba(255,255,255,.26); border-radius: 20px; color: var(--white); text-align: center; background: rgba(0,0,0,.3); backdrop-filter: blur(20px); }
     .placeholder-art strong { display: block; margin-bottom: 10px; font-size: 19px; font-weight: 600; }
     .placeholder-art p { margin: 0; color: #c7c7cc; font-size: 14px; }
+    .model-visual {
+      color: var(--white);
+      background: radial-gradient(circle at 82% 10%,rgba(41,151,255,.5),transparent 30%),linear-gradient(145deg,#0c2d52,#02070d 72%);
+      place-items: stretch;
+    }
+    .model-summary { display: flex; width: 100%; flex-direction: column; justify-content: space-between; gap: 44px; }
+    .model-score span { display: block; color: var(--link-dark); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .model-score strong { display: block; margin-top: 8px; font-size: clamp(58px,8vw,94px); font-weight: 600; letter-spacing: -.065em; line-height: .95; }
+    .model-score p { margin: 14px 0 0; color: #c7c7cc; font-size: 14px; }
+    .model-pipeline { display: grid; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.2); grid-template-columns: repeat(5,minmax(0,1fr)); gap: 14px; }
+    .model-step span { display: block; color: var(--link-dark); font-size: 11px; font-weight: 700; }
+    .model-step strong { display: block; margin-top: 7px; font-size: 13px; font-weight: 500; line-height: 1.35; }
     .project-copy { display: flex; padding: 48px; flex-direction: column; justify-content: space-between; gap: 44px; }
     .project-label { color: var(--link); font-size: 12px; font-weight: 600; letter-spacing: .02em; }
     .project-copy h3 { margin: 13px 0 17px; font-size: clamp(32px,4vw,46px); font-weight: 600; letter-spacing: -.045em; line-height: 1.08; }
@@ -128,6 +141,11 @@
     .journey-card .status { display: inline-flex; min-height: 30px; padding: 6px 12px; border-radius: 999px; color: var(--link); background: #edf6ff; align-items: center; font-size: 12px; font-weight: 600; }
     .journey-card h3 { margin: 64px 0 10px; font-size: 28px; font-weight: 600; letter-spacing: -.035em; }
     .journey-card p { margin: 0; color: var(--muted); }
+    .education-card { display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: center; }
+    .education-photo { width: 88px; height: 116px; overflow: hidden; border: 1px solid rgba(29,29,31,.1); border-radius: 14px; background: #eef1f4; }
+    .education-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .education-copy h3 { margin: 14px 0 10px; }
+    .education-copy p { line-height: 1.6; }
 
     .motivation { color: var(--white); background: var(--black-raised); }
     .question-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
@@ -230,6 +248,29 @@
       overflow: hidden; border: 1px solid rgba(29,29,31,.08); border-radius: 28px;
       background: var(--surface); box-shadow: 0 18px 48px rgba(0,0,0,.06);
     }
+    html.motion-ready .scroll-motion-item {
+      opacity: 0; filter: saturate(.72); transform: translateY(38px) scale(.965);
+      transition: opacity 720ms cubic-bezier(.22,1,.36,1), transform 720ms cubic-bezier(.22,1,.36,1), filter 720ms ease;
+      transition-delay: var(--reveal-delay,0ms); will-change: opacity,transform;
+    }
+    html.motion-ready .scroll-motion-item.is-visible { opacity: 1; filter: saturate(1); transform: translateY(0) scale(1); }
+    html.motion-ready .financial-card.scroll-accent {
+      opacity: .62; filter: saturate(.76); transform: translateY(44px) scale(.92);
+      transition: opacity 820ms cubic-bezier(.22,1,.36,1), transform 820ms cubic-bezier(.22,1,.36,1),
+        filter 820ms ease, background 820ms ease, border-color 820ms ease, box-shadow 820ms ease;
+      will-change: opacity,transform;
+    }
+    html.motion-ready .financial-card.scroll-accent.is-visible {
+      opacity: 1; filter: saturate(1); transform: translateY(0) scale(1);
+      border-color: rgba(0,113,227,.22);
+      background: linear-gradient(135deg,#fff 0%,#f7fbff 52%,#eaf4ff 100%);
+      box-shadow: 0 28px 74px rgba(7,27,51,.16);
+    }
+    .financial-card.scroll-accent .report-badge,
+    .financial-card.scroll-accent [data-financial] { transition: color 600ms ease, background 600ms ease, transform 600ms cubic-bezier(.22,1,.36,1); }
+    .financial-card.scroll-accent.is-visible .report-badge { color: var(--white); background: var(--blue); }
+    .financial-card.scroll-accent.is-visible [data-financial] { color: var(--blue); transform: scale(1.045); transform-origin: left center; }
+    .financial-card.scroll-accent.is-visible .financial-table th { color: #355574; background: rgba(224,239,255,.68); }
     .financial-card-head {
       display: flex; padding: 24px 28px; border-bottom: 1px solid var(--line-dark);
       align-items: center; justify-content: space-between; gap: 18px;
@@ -239,6 +280,43 @@
       color: var(--link); background: #edf6ff; align-items: center; font-size: 12px; font-weight: 700;
     }
     .financial-status { margin: 0; color: var(--muted); font-size: 13px; }
+    .financial-chart { padding: 34px 28px 30px; border-bottom: 1px solid var(--line-dark); }
+    .chart-heading { display: flex; margin-bottom: 30px; align-items: flex-end; justify-content: space-between; gap: 18px; }
+    .chart-heading p { margin: 0 0 5px; color: var(--link); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+    .chart-heading h3 { margin: 0; font-size: clamp(22px,3vw,30px); font-weight: 600; letter-spacing: -.035em; }
+    .chart-unit { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .chart-plot { display: grid; gap: 30px; }
+    .chart-group { display: grid; padding-bottom: 27px; border-bottom: 1px solid rgba(29,29,31,.09); gap: 11px; }
+    .chart-group:last-child { padding-bottom: 0; border-bottom: 0; }
+    .chart-group-head { display: flex; margin-bottom: 3px; align-items: baseline; justify-content: space-between; gap: 16px; }
+    .chart-group-head strong { font-size: 15px; font-weight: 650; }
+    .chart-group-head span { color: var(--muted); font-size: 10px; }
+    .chart-row { display: grid; grid-template-columns: 130px minmax(0,1fr) 78px; gap: 17px; align-items: center; }
+    .chart-label { color: #424245; font-size: 13px; font-weight: 600; }
+    .chart-track { position: relative; height: 18px; overflow: hidden; border-radius: 999px; background: rgba(29,29,31,.07); }
+    .chart-track::before {
+      position: absolute; inset: 0; z-index: 1; content: ""; pointer-events: none;
+      background: linear-gradient(90deg,transparent calc(33.333% - 1px),rgba(29,29,31,.08) 33.333%,transparent calc(33.333% + 1px),transparent calc(66.666% - 1px),rgba(29,29,31,.08) 66.666%,transparent calc(66.666% + 1px));
+    }
+    .chart-bar {
+      position: absolute; inset: 0; overflow: hidden; border-radius: inherit;
+      background: linear-gradient(90deg,var(--bar-start),var(--bar-end));
+      transform: scaleX(0); transform-origin: left center;
+      transition: transform 1050ms cubic-bezier(.16,1,.3,1); transition-delay: var(--chart-delay,0ms);
+    }
+    .chart-bar::after {
+      position: absolute; inset: 0; content: "";
+      background: linear-gradient(100deg,transparent 25%,rgba(255,255,255,.48) 48%,transparent 72%);
+      transform: translateX(-120%);
+    }
+    .financial-chart.is-chart-active .chart-bar { transform: scaleX(var(--bar-scale)); }
+    .financial-chart.is-chart-active .chart-bar::after { animation: chart-shine 1050ms ease-out calc(var(--chart-delay,0ms) + 180ms) 1 both; }
+    .chart-value { text-align: right; white-space: nowrap; }
+    .chart-value strong { color: var(--text); font-size: 16px; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+    .chart-value small { margin-left: 3px; color: var(--muted); font-size: 10px; }
+    .chart-axis { display: grid; margin: 3px 95px 0 147px; color: var(--muted); grid-template-columns: repeat(4,1fr); font-size: 10px; }
+    .chart-axis span:not(:first-child) { text-align: right; }
+    @keyframes chart-shine { to { transform: translateX(120%); } }
     .financial-table-wrap { overflow-x: auto; }
     .financial-table { width: 100%; min-width: 880px; border-collapse: collapse; }
     .financial-table th,
@@ -261,6 +339,7 @@
     }
     .financial-card-foot p { margin: 0; }
     .financial-card-foot a { color: var(--link); font-weight: 600; }
+    .financial-source-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 6px 14px; }
 
     .company-dialog {
       width: min(590px,calc(100% - 36px)); max-height: calc(100dvh - 36px); padding: 0;
@@ -288,6 +367,83 @@
     .dialog-close:hover { color: var(--text); background: var(--white); }
     @keyframes dialog-in { from { opacity: 0; transform: translateY(14px) scale(.98); } }
 
+    .company-picker {
+      display: flex; padding: 0 28px; border-bottom: 1px solid var(--line-dark);
+      background: var(--surface); gap: 4px; overflow-x: auto;
+    }
+    .company-tab {
+      display: inline-flex; min-height: 64px; padding: 12px 18px 10px; border: 0; border-bottom: 3px solid transparent;
+      color: #355574; background: transparent; align-items: center; gap: 10px; cursor: pointer; font: inherit; font-size: 13px; font-weight: 700;
+      white-space: nowrap; transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .company-tab-index { color: #9aaabd; font-size: 12px; font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+    .company-tab:hover { color: var(--blue); background: #f5f9fd; }
+    .company-tab[aria-selected="true"] { color: var(--navy); border-color: var(--blue); background: #f7fbff; }
+    .company-tab[aria-selected="true"] .company-tab-index { color: var(--blue); }
+    .company-dashboard { padding: 34px 28px 30px; }
+    .company-dashboard.is-switching { animation: company-panel-in 360ms cubic-bezier(.22,1,.36,1); }
+    @keyframes company-panel-in { from { opacity: .35; transform: translateY(9px); } }
+    .company-overview { display: flex; margin-bottom: 28px; align-items: flex-end; justify-content: space-between; gap: 24px; }
+    .company-kicker { margin: 0 0 6px; color: var(--link); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+    .company-overview h3 { margin: 0; font-size: clamp(28px,4vw,40px); font-weight: 650; letter-spacing: -.045em; }
+    .company-report-meta { margin: 9px 0 0; color: var(--muted); font-size: 12px; }
+    .company-report-link { color: var(--link); font-size: 13px; font-weight: 650; white-space: nowrap; }
+    .company-visual-grid { display: grid; grid-template-columns: 1.02fr .9fr 1.25fr; gap: 14px; }
+    .metric-visual {
+      position: relative; min-height: 330px; padding: 24px; overflow: hidden;
+      border: 1px solid rgba(29,29,31,.1); border-radius: 22px; background: #fbfbfd;
+    }
+    .metric-visual-label { display: block; color: #515154; font-size: 12px; font-weight: 650; }
+    .metric-visual-note { margin: 7px 0 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+    .revenue-card { color: var(--white); border-color: transparent; background: radial-gradient(circle at 85% 12%,rgba(41,151,255,.42),transparent 35%),var(--navy); }
+    .revenue-card .metric-visual-label { color: #c7d9ec; }
+    .revenue-card .metric-visual-note { color: var(--muted-dark); }
+    .revenue-number { display: flex; margin-top: 56px; align-items: baseline; gap: 6px; }
+    .revenue-number strong { font-size: clamp(56px,6vw,82px); font-weight: 600; line-height: .9; letter-spacing: -.065em; }
+    .revenue-number span { color: var(--link-dark); font-size: 16px; font-weight: 650; }
+    .revenue-exact { position: absolute; right: 24px; bottom: 24px; left: 24px; margin: 0; color: #c7d9ec; font-size: 11px; font-variant-numeric: tabular-nums; }
+    .revenue-card::after {
+      position: absolute; right: -54px; bottom: -76px; width: 210px; height: 210px;
+      border: 1px solid rgba(100,210,255,.35); border-radius: 50%; content: "";
+      box-shadow: 0 0 0 30px rgba(100,210,255,.05),0 0 0 62px rgba(100,210,255,.035);
+    }
+    .margin-card { display: flex; align-items: center; flex-direction: column; }
+    .margin-card .metric-visual-label { align-self: stretch; }
+    .margin-donut {
+      position: relative; display: grid; width: 170px; margin: 24px auto 18px; aspect-ratio: 1;
+      border-radius: 50%; place-items: center;
+      background: conic-gradient(var(--blue) 0 calc(var(--margin) * 1%),rgba(7,27,51,.09) 0 100%);
+      transform: rotate(-90deg); transition: background 380ms ease;
+    }
+    .margin-donut::after { position: absolute; inset: 18px; border-radius: 50%; background: #fbfbfd; content: ""; }
+    .margin-donut strong { position: relative; z-index: 1; font-size: 31px; font-weight: 650; letter-spacing: -.04em; transform: rotate(90deg); }
+    .margin-income { margin: auto 0 0; text-align: center; }
+    .margin-income span { display: block; color: var(--muted); font-size: 11px; }
+    .margin-income strong { display: block; margin-top: 5px; font-size: 19px; font-weight: 650; }
+    .margin-income small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+    .backlog-card { background: linear-gradient(145deg,#fff 0%,#eef6ff 100%); }
+    .bubble-stage { display: flex; height: 196px; margin-top: 19px; align-items: flex-end; justify-content: center; gap: 15px; }
+    .metric-bubble {
+      display: grid; flex: 0 0 auto; aspect-ratio: 1; border-radius: 50%; place-items: center; text-align: center;
+      transition: width 460ms cubic-bezier(.22,1,.36,1), background 300ms ease;
+    }
+    .metric-bubble span { display: block; font-size: 10px; font-weight: 650; }
+    .metric-bubble strong { display: block; margin-top: 2px; font-size: 14px; font-weight: 650; }
+    .revenue-bubble { width: 94px; color: var(--white); background: var(--navy); }
+    .backlog-bubble { width: var(--backlog-size); color: var(--navy); border: 2px solid rgba(0,113,227,.36); background: rgba(41,151,255,.18); }
+    .backlog-summary { display: flex; margin-top: 18px; align-items: flex-end; justify-content: space-between; gap: 12px; }
+    .backlog-summary strong { display: block; font-size: 22px; font-weight: 650; letter-spacing: -.03em; }
+    .backlog-summary small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+    .backlog-ratio { color: var(--link); text-align: right; }
+    .backlog-ratio span { display: block; color: var(--muted); font-size: 10px; }
+    .backlog-ratio strong { font-size: 20px; }
+    .company-insight {
+      display: flex; margin: 22px 0 0; padding: 16px 18px; border-radius: 14px;
+      color: #355574; background: #edf6ff; align-items: center; gap: 10px; font-size: 13px;
+    }
+    .company-insight::before { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); content: ""; flex: 0 0 auto; }
+    .financial-card-foot .active-source-link { color: var(--link); font-weight: 650; white-space: nowrap; }
+
     @media (max-width: 900px) {
       .work-grid { grid-template-columns: 1fr 1fr; }
       .work-card:last-child { grid-column: 1 / -1; }
@@ -300,17 +456,24 @@
       .company-research .section-head { text-align: center; }
       .company-research .section-head h2,
       .company-research .section-intro { margin-left: auto; }
+      .company-visual-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .backlog-card { grid-column: 1 / -1; }
     }
     @media (max-width: 680px) {
       .container { width: min(100% - 32px,var(--content)); }
       .nav-links a:not(:last-child) { display: none; }
-      .hero { min-height: 700px; padding: 98px 0 48px; }
+      .hero { min-height: 580px; padding: 78px 0 34px; }
       .hero::before { top: 22%; width: 110vw; }
-      .hero-summary { margin-top: 34px; }
+      h1 { font-size: clamp(40px,11vw,52px); }
+      h1 span { margin-top: 14px; font-size: clamp(19px,5.4vw,24px); }
+      .hero-summary { margin-top: 24px; gap: 18px; }
       section { padding: 88px 0; }
       .section-head { margin-bottom: 38px; }
       .section-intro, .hero-summary p, .contact > .container > p:not(.eyebrow), .safety-search-card > p:not(.eyebrow) { font-size: 17px; }
       .snapshot-grid, .work-grid, .journey-grid, .question-list { grid-template-columns: 1fr; }
+      .education-card { grid-template-columns: 76px 1fr; gap: 14px; }
+      .education-photo { width: 76px; height: 100px; }
+      .education-copy h3 { margin: 10px 0 8px; font-size: 24px; }
       .snapshot-card { min-height: 230px; padding: 28px; }
       .snapshot-card strong { margin-top: 54px; }
       .fit-list li { grid-template-columns: 42px 1fr; gap: 18px; }
@@ -327,8 +490,30 @@
       .competency-visual { min-height: 220px; padding: 24px; }
       .portfolio-panel { min-height: 0; }
       .portfolio-panel .project-visual { min-height: 300px; }
+      .model-pipeline { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+      .model-step:last-child { grid-column: 1 / -1; }
       .next-card { min-height: 320px; padding: 30px 24px; }
       .financial-card-head, .financial-card-foot { padding: 18px 20px; align-items: flex-start; flex-direction: column; }
+      .company-picker { padding: 0 20px; gap: 0; }
+      .company-tab { min-height: 58px; padding: 10px 14px 8px; font-size: 12px; }
+      .company-tab-index { font-size: 11px; }
+      .company-dashboard { padding: 28px 20px 24px; }
+      .company-overview { margin-bottom: 22px; align-items: flex-start; flex-direction: column; }
+      .company-visual-grid { grid-template-columns: 1fr; }
+      .backlog-card { grid-column: auto; }
+      .metric-visual { min-height: 310px; padding: 22px; }
+      .revenue-number { margin-top: 46px; }
+      .revenue-exact { right: 22px; bottom: 22px; left: 22px; }
+      .bubble-stage { height: 188px; }
+      .financial-chart { padding: 28px 20px 24px; }
+      .chart-heading { margin-bottom: 26px; align-items: flex-start; flex-direction: column; }
+      .chart-plot { gap: 25px; }
+      .chart-group { padding-bottom: 22px; }
+      .chart-row { grid-template-columns: 92px minmax(130px,1fr) 66px; gap: 10px; }
+      .chart-label { font-size: 11px; }
+      .chart-axis { margin-right: 76px; margin-left: 102px; }
+      .chart-value strong { font-size: 14px; }
+      .financial-source-links { justify-content: flex-start; }
       .dialog-content { padding: 28px 22px 22px; }
       .dialog-facts { grid-template-columns: 1fr; }
       .dialog-fact { min-height: 82px; }
@@ -340,6 +525,10 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
+      html.motion-ready .scroll-motion-item,
+      html.motion-ready .financial-card.scroll-accent { opacity: 1; filter: none; transform: none; }
+      .chart-bar { transition: none; }
+      .financial-chart.is-chart-active .chart-bar::after { animation: none; }
     }
   </style>
 </head>
@@ -361,11 +550,11 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content container">
         <p class="eyebrow">HD현대중공업 설계 직무 신입 포트폴리오</p>
-        <h1 id="hero-title">설계를 배우고,<br>제작으로 확인했습니다.<span>중앙대학교 에너지시스템공학부 발전기계 전공</span></h1>
+        <h1 id="hero-title">설계를 배우고,<br>제작으로 확인했습니다.<span>기계 시스템을 설계와 제작으로 연결했습니다.</span></h1>
         <div class="hero-summary">
           <p>기계 시스템에 대한 이해를 바탕으로 CAD 모델링과 3D 프린팅 제작을 경험했습니다.</p>
           <ul class="fact-list" aria-label="핵심 자격과 경험">
-            <li>2026년 2월 졸업</li><li>CAD실무능력평가 2급</li><li>일반기계기사 실기 준비 중</li>
+            <li>CAD실무능력평가 2급</li><li>일반기계기사 실기 준비 중</li><li>3D 프린팅 제작 경험</li>
           </ul>
           <a class="button" href="#competencies">역량 살펴보기</a>
         </div>
@@ -435,7 +624,7 @@
         <div class="section-head">
           <p class="eyebrow">Company research</p>
           <h2 id="companies-title">숫자로 확인한 관심 기업</h2>
-          <p class="section-intro">HD현대중공업의 2025년 사업보고서를 바탕으로 연결 매출액, 영업이익과 기말 수주잔고를 한눈에 정리했습니다.</p>
+          <p class="section-intro">관심 기업을 하나씩 선택해 2025년 연결 재무와 기말 수주잔고를 살펴볼 수 있습니다.</p>
         </div>
 
         <div class="financial-card">
@@ -443,25 +632,68 @@
             <span class="report-badge">OpenDART · 2025 사업보고서</span>
             <p class="financial-status" id="financial-data-status" aria-live="polite">2025년 12월 31일 · 연결 기준</p>
           </div>
-          <div class="financial-table-wrap">
-            <table class="financial-table">
-              <thead>
-                <tr><th scope="col">회사</th><th scope="col">매출액</th><th scope="col">영업이익</th><th scope="col">수주잔고</th><th scope="col">공시 기준</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><button class="company-button" id="open-company-dialog" type="button" aria-haspopup="dialog">HD현대중공업</button></td>
-                  <td><strong data-financial="revenue">17.58조원</strong><small data-financial-exact="revenue">17,580,633,257,000원</small></td>
-                  <td><strong data-financial="operating_income">2.04조원</strong><small data-financial-exact="operating_income">2,037,510,103,000원</small></td>
-                  <td><strong data-financial="order_backlog">56.38조원</strong><small data-financial-exact="order_backlog">56,384,472,000,000원</small></td>
-                  <td><strong>2025년 사업보고서</strong><small>접수번호 20260320000859</small></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="company-picker" role="tablist" aria-label="관심 기업 선택">
+            <button class="company-tab" id="company-tab-hd" type="button" role="tab" aria-selected="true" aria-controls="financial-company-panel"
+              data-company-key="hd_hhi" data-company-name="HD현대중공업" data-revenue="17580633257000" data-operating-income="2037510103000" data-backlog="56384472000000"
+              data-report-name="2025년 사업보고서" data-receipt-number="20260320000859" data-filing-date="2026.03.20" data-report-url="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000859"><span class="company-tab-index">01</span><span>HD현대중공업</span></button>
+            <button class="company-tab" id="company-tab-samsung" type="button" role="tab" aria-selected="false" aria-controls="financial-company-panel" tabindex="-1"
+              data-company-key="samsung_hi" data-company-name="삼성중공업" data-revenue="10650010702818" data-operating-income="862210880029" data-backlog="28030500000000"
+              data-report-name="2025년 사업보고서" data-receipt-number="20260312001037" data-filing-date="2026.03.12" data-report-url="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001037"><span class="company-tab-index">02</span><span>삼성중공업</span></button>
+            <button class="company-tab" id="company-tab-hanwha" type="button" role="tab" aria-selected="false" aria-controls="financial-company-panel" tabindex="-1"
+              data-company-key="hanwha_ocean" data-company-name="한화오션" data-revenue="12783512278323" data-operating-income="1167590137928" data-backlog="34495064000000"
+              data-report-name="2025년 정정 사업보고서" data-receipt-number="20260317000644" data-filing-date="2026.03.17" data-report-url="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000644"><span class="company-tab-index">03</span><span>한화오션</span></button>
           </div>
+
+          <div class="company-dashboard" id="financial-company-panel" role="tabpanel" aria-labelledby="company-tab-hd">
+            <div class="company-overview">
+              <div>
+                <p class="company-kicker">COMPANY FINANCIALS</p>
+                <h3 id="active-company-name">HD현대중공업</h3>
+                <p class="company-report-meta" id="active-company-report">2025년 사업보고서 · 접수번호 20260320000859 · 공시일 2026.03.20</p>
+              </div>
+              <a class="company-report-link" id="active-company-report-link" href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000859" target="_blank" rel="noopener noreferrer">사업보고서 원문 →</a>
+            </div>
+
+            <div class="company-visual-grid">
+              <article class="metric-visual revenue-card" aria-labelledby="revenue-visual-title">
+                <span class="metric-visual-label" id="revenue-visual-title">매출액</span>
+                <p class="metric-visual-note">2025년 연결 기준</p>
+                <div class="revenue-number"><strong id="active-revenue">17.58</strong><span>조원</span></div>
+                <p class="revenue-exact" id="active-revenue-exact">17,580,633,257,000원</p>
+              </article>
+
+              <article class="metric-visual margin-card" aria-labelledby="margin-visual-title">
+                <span class="metric-visual-label" id="margin-visual-title">영업이익률</span>
+                <div class="margin-donut" id="margin-donut" role="img" aria-label="영업이익률 11.59%" style="--margin:11.59">
+                  <strong id="active-margin">11.59%</strong>
+                </div>
+                <div class="margin-income">
+                  <span>영업이익</span>
+                  <strong id="active-operating-income">2.04조원</strong>
+                  <small id="active-operating-income-exact">2,037,510,103,000원</small>
+                </div>
+              </article>
+
+              <article class="metric-visual backlog-card" aria-labelledby="backlog-visual-title">
+                <span class="metric-visual-label" id="backlog-visual-title">매출과 수주잔고의 규모</span>
+                <p class="metric-visual-note">원의 면적은 각 금액에 비례합니다.</p>
+                <div class="bubble-stage" id="backlog-bubbles" role="img" aria-label="매출액 17.58조원, 수주잔고 56.38조원">
+                  <div class="metric-bubble revenue-bubble"><div><span>매출</span><strong id="bubble-revenue">17.58</strong></div></div>
+                  <div class="metric-bubble backlog-bubble" style="--backlog-size:168px"><div><span>수주잔고</span><strong id="bubble-backlog">56.38</strong></div></div>
+                </div>
+                <div class="backlog-summary">
+                  <div><strong id="active-backlog">56.38조원</strong><small id="active-backlog-exact">56,384,472,000,000원</small></div>
+                  <div class="backlog-ratio"><span>매출 대비</span><strong id="active-backlog-ratio">3.21배</strong></div>
+                </div>
+              </article>
+            </div>
+
+            <p class="company-insight" id="active-company-insight">영업이익률은 11.59%이며, 기말 수주잔고는 연간 매출의 3.21배입니다.</p>
+          </div>
+
           <div class="financial-card-foot">
-            <p>수주잔고는 사업보고서 「매출 및 수주상황」의 기말 합계입니다.</p>
-            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000859" target="_blank" rel="noopener noreferrer">DART 원문 보기 →</a>
+            <p>수주잔고는 선택한 회사 사업보고서의 2025년 말 연결 기말 합계입니다.</p>
+            <a class="active-source-link" id="active-source-link" href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000859" target="_blank" rel="noopener noreferrer">HD현대중공업 공시 확인 →</a>
           </div>
         </div>
       </div>
@@ -483,22 +715,60 @@
           </div>
 
           <div class="tab-panel portfolio-panel" id="panel-project" role="tabpanel" aria-labelledby="tab-project">
-            <article class="project-shell">
-              <div class="project-visual"><div class="placeholder-art"><strong>프로젝트 이미지 필요</strong><p>3D 모델링 화면, 2D 도면, 출력 과정 또는 완성품 사진을 추가하세요.</p></div></div>
-              <div class="project-copy">
-                <div><span class="project-label">MACHINE ENERGY SYSTEM PROJECT</span><h3>3D 프린팅 제작 팀프로젝트</h3><p>기계에너지시스템프로젝트에서 3D 프린팅을 제작하는 팀프로젝트를 수행했습니다.</p></div>
-                <div>
-                  <ul class="project-facts">
-                    <li><span>기간</span><strong class="needs-detail">정보 입력 필요</strong></li>
-                    <li><span>팀 구성</span><strong class="needs-detail">정보 입력 필요</strong></li>
-                    <li><span>담당 역할</span><strong class="needs-detail">정보 입력 필요</strong></li>
-                    <li><span>사용 도구</span><strong class="needs-detail">정보 입력 필요</strong></li>
-                    <li><span>결과</span><strong class="needs-detail">정보 입력 필요</strong></li>
-                  </ul>
-                  <p class="evidence-note">문제 → 요구조건 → 설계안 → 본인의 기여 → 제작 → 검증 → 설계 변경 → 결과 순서로 실제 내용을 추가하세요.</p>
+            <div class="project-list">
+              <article class="project-shell">
+                <div class="project-visual"><div class="placeholder-art"><strong>프로젝트 이미지 필요</strong><p>3D 모델링 화면, 2D 도면, 출력 과정 또는 완성품 사진을 추가하세요.</p></div></div>
+                <div class="project-copy">
+                  <div><span class="project-label">MACHINE ENERGY SYSTEM PROJECT</span><h3>3D 프린팅 제작 팀프로젝트</h3><p>기계에너지시스템프로젝트에서 3D 프린팅을 제작하는 팀프로젝트를 수행했습니다.</p></div>
+                  <div>
+                    <ul class="project-facts">
+                      <li><span>기간</span><strong class="needs-detail">정보 입력 필요</strong></li>
+                      <li><span>팀 구성</span><strong class="needs-detail">정보 입력 필요</strong></li>
+                      <li><span>담당 역할</span><strong class="needs-detail">정보 입력 필요</strong></li>
+                      <li><span>사용 도구</span><strong class="needs-detail">정보 입력 필요</strong></li>
+                      <li><span>결과</span><strong class="needs-detail">정보 입력 필요</strong></li>
+                    </ul>
+                    <p class="evidence-note">문제 → 요구조건 → 설계안 → 본인의 기여 → 제작 → 검증 → 설계 변경 → 결과 순서로 실제 내용을 추가하세요.</p>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+
+              <article class="project-shell">
+                <div class="project-visual model-visual">
+                  <div class="model-summary">
+                    <div class="model-score">
+                      <span>FINAL MACRO F1</span>
+                      <strong>0.9106</strong>
+                      <p>1,000 images · 5 classes · WeldingResNet</p>
+                    </div>
+                    <div class="model-pipeline" aria-label="모델 학습 과정">
+                      <div class="model-step"><span>01</span><strong>데이터 탐색</strong></div>
+                      <div class="model-step"><span>02</span><strong>전처리·증강</strong></div>
+                      <div class="model-step"><span>03</span><strong>Custom ResNet</strong></div>
+                      <div class="model-step"><span>04</span><strong>5-Fold 검증</strong></div>
+                      <div class="model-step"><span>05</span><strong>Pseudo-label 재학습</strong></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-copy">
+                  <div>
+                    <span class="project-label">TEAM 04 / IMAGE CLASSIFICATION</span>
+                    <h3>용접 결함 이미지 분류 모델</h3>
+                    <p>1,000장의 용접 X-ray 이미지를 5개 클래스로 분류하기 위해 데이터 탐색과 전처리부터 커스텀 ResNet 설계, 교차검증, 고신뢰도 Pseudo-label 재학습까지 수행했습니다.</p>
+                  </div>
+                  <div>
+                    <ul class="project-facts">
+                      <li><span>데이터</span><strong>1,000장 · 5개 클래스</strong></li>
+                      <li><span>모델</span><strong>WeldingResNet (Custom CNN)</strong></li>
+                      <li><span>검증</span><strong>Stratified 5-Fold · 평균 F1 0.8958</strong></li>
+                      <li><span>개선</span><strong>Baseline 0.56 → 최종 F1 0.9106</strong></li>
+                      <li><span>결과</span><strong>Public 0.9312 · Private 0.90</strong></li>
+                    </ul>
+                    <p class="evidence-note">Confidence 0.95 이상의 미분류 이미지 299장을 재학습에 활용했습니다. 이후에는 기준 강화, 독립 검증, 증강 조건 비교와 반복 오분류 이미지의 추가 학습을 개선 과제로 정리했습니다.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
 
           <div class="tab-panel portfolio-panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work" hidden>
@@ -511,7 +781,7 @@
 
           <div class="tab-panel portfolio-panel" id="panel-journey" role="tabpanel" aria-labelledby="tab-journey" hidden>
             <div class="journey-grid">
-              <article class="journey-card"><span class="status">GRADUATED</span><h3>중앙대학교</h3><p>에너지시스템공학부 발전기계 전공<br>2026년 2월 졸업</p></article>
+              <article class="journey-card education-card"><div class="education-photo"><img src="1-1.jpg" alt="증명사진"></div><div class="education-copy"><span class="status">GRADUATED</span><h3>중앙대학교</h3><p>에너지시스템공학부 발전기계 전공<br>2026년 2월 졸업</p></div></article>
               <article class="journey-card"><span class="status">ACQUIRED</span><h3>CAD실무능력평가 2급</h3><p>한국생산성본부 주최</p></article>
               <article class="journey-card"><span class="status">IN PROGRESS</span><h3>일반기계기사 실기</h3><p>2D와 3D 도면 작업을 동반한 실기 시험을 준비하고 있습니다.</p></article>
               <article class="journey-card"><span class="status">COURSE</span><h3>CAD 과목</h3><p>과목을 수강하며 3D 모델링을 수행했습니다.</p></article>
@@ -553,23 +823,6 @@
     </section>
   </main>
 
-  <dialog class="company-dialog" id="company-dialog" aria-labelledby="company-dialog-title" aria-describedby="company-dialog-description">
-    <div class="dialog-content">
-      <p class="dialog-kicker">COMPANY NOTE</p>
-      <h3 id="company-dialog-title">HD현대중공업</h3>
-      <p class="dialog-description" id="company-dialog-description">사업보고서상 조선, 해양플랜트, 엔진기계 사업을 영위하며 2025년 연결 매출의 70.89%가 조선 부문에서 발생했습니다.</p>
-      <div class="dialog-facts" aria-label="사업부문별 매출 비중">
-        <div class="dialog-fact"><span>조선</span><strong>70.89%</strong></div>
-        <div class="dialog-fact"><span>해양플랜트</span><strong>7.05%</strong></div>
-        <div class="dialog-fact"><span>엔진기계</span><strong>21.56%</strong></div>
-      </div>
-      <div class="dialog-actions">
-        <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000859" target="_blank" rel="noopener noreferrer">사업보고서 원문 확인 →</a>
-        <form method="dialog"><button class="dialog-close" type="submit">닫기</button></form>
-      </div>
-    </div>
-  </dialog>
-
   <footer>
     <div class="footer-inner container"><span>설계 직무 신입 포트폴리오</span><a href="#top">맨 위로 ↑</a></div>
   </footer>
@@ -607,18 +860,124 @@
         });
       });
 
-      const formatTrillionWon = (value) => `${(value / 1e12).toLocaleString('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}조원`;
-      const formatExactWon = (value) => `${new Intl.NumberFormat('ko-KR').format(value)}원`;
-      const applyFinancialData = (data) => {
-        data.metrics.forEach((metric) => {
-          const summary = document.querySelector(`[data-financial="${metric.key}"]`);
-          const exact = document.querySelector(`[data-financial-exact="${metric.key}"]`);
-          if (summary) summary.textContent = formatTrillionWon(metric.value);
-          if (exact) exact.textContent = formatExactWon(metric.value);
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reducedMotion && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('motion-ready');
+
+        const revealTargets = document.querySelectorAll(
+          '.section-head, .competency-panel, .project-shell, .work-card, .journey-card, .question, .next-card, .safety-search-card'
+        );
+        revealTargets.forEach((target, index) => {
+          target.classList.add('scroll-motion-item');
+          target.style.setProperty('--reveal-delay', `${(index % 3) * 70}ms`);
         });
 
-        const status = document.getElementById('financial-data-status');
-        status.textContent = `${data.report.period_end} · ${data.report.financial_statement_basis} 기준 · ${data.retrieved_at} 수집`;
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: .16, rootMargin: '0px 0px -7% 0px' });
+        revealTargets.forEach((target) => revealObserver.observe(target));
+
+        const financialCard = document.querySelector('.financial-card');
+        financialCard.classList.add('scroll-accent');
+        const accentObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle('is-visible', entry.isIntersecting && entry.intersectionRatio >= .28);
+          });
+        }, { threshold: [0, .28, .6], rootMargin: '-8% 0px -8% 0px' });
+        accentObserver.observe(financialCard);
+      }
+
+      const companyTabs = Array.from(document.querySelectorAll('.company-tab'));
+      const companyPanel = document.getElementById('financial-company-panel');
+      const formatTrillionNumber = (value) => (value / 1e12).toLocaleString('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const formatTrillionWon = (value) => `${formatTrillionNumber(value)}조원`;
+      const formatExactWon = (value) => `${new Intl.NumberFormat('ko-KR').format(value)}원`;
+
+      const renderCompany = (tab, animate = true) => {
+        const revenue = Number(tab.dataset.revenue);
+        const operatingIncome = Number(tab.dataset.operatingIncome);
+        const backlog = Number(tab.dataset.backlog);
+        const operatingMargin = operatingIncome / revenue * 100;
+        const backlogRatio = backlog / revenue;
+        const backlogBubbleSize = Math.min(188, Math.round(94 * Math.sqrt(backlogRatio)));
+
+        document.getElementById('active-company-name').textContent = tab.dataset.companyName;
+        document.getElementById('active-company-report').textContent = `${tab.dataset.reportName} · 접수번호 ${tab.dataset.receiptNumber} · 공시일 ${tab.dataset.filingDate}`;
+        document.getElementById('active-revenue').textContent = formatTrillionNumber(revenue);
+        document.getElementById('active-revenue-exact').textContent = formatExactWon(revenue);
+        document.getElementById('active-operating-income').textContent = formatTrillionWon(operatingIncome);
+        document.getElementById('active-operating-income-exact').textContent = formatExactWon(operatingIncome);
+        document.getElementById('active-backlog').textContent = formatTrillionWon(backlog);
+        document.getElementById('active-backlog-exact').textContent = formatExactWon(backlog);
+        document.getElementById('active-margin').textContent = `${operatingMargin.toFixed(2)}%`;
+        document.getElementById('active-backlog-ratio').textContent = `${backlogRatio.toFixed(2)}배`;
+        document.getElementById('bubble-revenue').textContent = formatTrillionNumber(revenue);
+        document.getElementById('bubble-backlog').textContent = formatTrillionNumber(backlog);
+        document.getElementById('active-company-insight').textContent = `영업이익률은 ${operatingMargin.toFixed(2)}%이며, 기말 수주잔고는 연간 매출의 ${backlogRatio.toFixed(2)}배입니다.`;
+
+        const marginDonut = document.getElementById('margin-donut');
+        marginDonut.style.setProperty('--margin', operatingMargin.toFixed(2));
+        marginDonut.setAttribute('aria-label', `영업이익률 ${operatingMargin.toFixed(2)}%`);
+        document.querySelector('.backlog-bubble').style.setProperty('--backlog-size', `${backlogBubbleSize}px`);
+        document.getElementById('backlog-bubbles').setAttribute('aria-label', `매출액 ${formatTrillionNumber(revenue)}조원, 수주잔고 ${formatTrillionNumber(backlog)}조원`);
+
+        const reportLinks = [document.getElementById('active-company-report-link'), document.getElementById('active-source-link')];
+        reportLinks.forEach((link) => { link.href = tab.dataset.reportUrl; });
+        document.getElementById('active-source-link').textContent = `${tab.dataset.companyName} 공시 확인 →`;
+        companyPanel.setAttribute('aria-labelledby', tab.id);
+
+        if (animate && !reducedMotion) {
+          companyPanel.classList.remove('is-switching');
+          void companyPanel.offsetWidth;
+          companyPanel.classList.add('is-switching');
+        }
+      };
+
+      const activateCompany = (nextTab, moveFocus = false, animate = true) => {
+        companyTabs.forEach((tab) => {
+          const isActive = tab === nextTab;
+          tab.setAttribute('aria-selected', String(isActive));
+          tab.tabIndex = isActive ? 0 : -1;
+        });
+        renderCompany(nextTab, animate);
+        if (moveFocus) nextTab.focus();
+      };
+
+      companyTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => activateCompany(tab));
+        tab.addEventListener('keydown', (event) => {
+          let nextIndex = index;
+          if (event.key === 'ArrowRight') nextIndex = (index + 1) % companyTabs.length;
+          else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + companyTabs.length) % companyTabs.length;
+          else if (event.key === 'Home') nextIndex = 0;
+          else if (event.key === 'End') nextIndex = companyTabs.length - 1;
+          else return;
+          event.preventDefault();
+          activateCompany(companyTabs[nextIndex], true);
+        });
+      });
+      activateCompany(companyTabs[0], false, false);
+
+      const applyFinancialData = (data) => {
+        data.companies.forEach((company) => {
+          const tab = companyTabs.find((item) => item.dataset.companyKey === company.key);
+          if (!tab) return;
+          const metricValues = Object.fromEntries(company.metrics.map((metric) => [metric.key, metric.value]));
+          tab.dataset.revenue = metricValues.revenue;
+          tab.dataset.operatingIncome = metricValues.operating_income;
+          tab.dataset.backlog = metricValues.order_backlog;
+          tab.dataset.reportName = company.report.name;
+          tab.dataset.receiptNumber = company.report.receipt_number;
+          tab.dataset.filingDate = company.report.filing_date.replaceAll('-', '.');
+          tab.dataset.reportUrl = company.report.url;
+        });
+        const activeTab = companyTabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || companyTabs[0];
+        renderCompany(activeTab, false);
+        document.getElementById('financial-data-status').textContent = `${data.reporting_basis.period_end} · ${data.reporting_basis.financial_statement_basis} 기준 · ${data.retrieved_at} 수집`;
       };
 
       if (window.location.protocol !== 'file:') {
@@ -634,13 +993,6 @@
       } else {
         document.getElementById('financial-data-status').textContent = '2025년 12월 31일 · 연결 기준 · 저장값 표시 중';
       }
-
-      const companyDialog = document.getElementById('company-dialog');
-      const openCompanyDialog = document.getElementById('open-company-dialog');
-      openCompanyDialog.addEventListener('click', () => companyDialog.showModal());
-      companyDialog.addEventListener('click', (event) => {
-        if (event.target === companyDialog) companyDialog.close();
-      });
     })();
   </script>
 </body>
