@@ -1,0 +1,4 @@
+company,corp_code,business_year,period_end,basis,metric_key,metric_label,value_krw,reported_value,reported_unit,receipt_number,source
+HD현대중공업,01390344,2025,2025-12-31,연결,revenue,매출액,17580633257000,17580633257000,원,20260320000859,OpenDART 단일회사 전체 재무제표 API
+HD현대중공업,01390344,2025,2025-12-31,연결,operating_income,영업이익,2037510103000,2037510103000,원,20260320000859,OpenDART 단일회사 전체 재무제표 API
+HD현대중공업,01390344,2025,2025-12-31,연결,order_backlog,수주잔고,56384472000000,56384472,백만원,20260320000859,OpenDART 사업보고서 원문 수주상황
